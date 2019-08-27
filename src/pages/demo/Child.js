@@ -37,8 +37,8 @@ export default class index extends React.Component {
             padding: 100
         }
         return (
-            <div style={style}>
-                <p>{this.props.name}</p>
+            <div style={style} className='container'>
+                <p>this.props.name: {this.props.name}</p>
             </div>
         );
     }
