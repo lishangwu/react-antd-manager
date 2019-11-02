@@ -21,7 +21,7 @@ export default class index extends React.Component {
 
     renderMenu = (data) => {
         return data.map(item => {
-            if (item.children) {
+            if (item.children) { 
                 return (
                     <SubMenu title={item.title} key={item.key}>
                         {this.renderMenu(item.children)}
@@ -41,7 +41,7 @@ export default class index extends React.Component {
             <div>
                 <div className="logo">
                     <img src="/assets/logo-ant.svg" alt="" />
-                    <h1>Imooc MS</h1>
+                    <h1>React MS</h1>
                 </div>
                 <Menu theme='dark'>
                     {this.state.menuTreeNode}

@@ -132,6 +132,23 @@ module.exports = function(webpackEnv) {
           },
         }
       );
+      let loader = {
+        loader: require.resolve(preProcessor),
+        options: {
+          sourceMap: isEnvProduction && shouldUseSourceMap,
+        },
+      }
+      if (preProcessor === "less-loader") {
+        loader.options.modifyVars = {
+          'primary-color' : '#f9c700',
+          // 'btn-primary-bg': '#FF2A8E',
+          // 'btn-default-bg': '#6236FF',
+          // 'menu-dark-bg':'linear-gradient(#64687D,#3D415A)',
+          // 'menu-dark-submenu-bg':'#fff',
+        }
+        loader.options.javascriptEnabled = true
+      }
+      loaders.push(loader);
     }
     return loaders;
   };
@@ -383,7 +400,7 @@ module.exports = function(webpackEnv) {
                     require.resolve('babel-plugin-import'),// 导入 import 插件
                     {
                       libraryName: 'antd',   //暴露antd
-                      style: 'css'
+                      style: true //'css'
                     }
                   ],
                 ],

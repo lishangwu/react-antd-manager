@@ -21,7 +21,7 @@ export default class index extends React.Component {
         this.setState({
             count: this.state.count + 1
         })
-    }
+   } 
 
     render() {
         let style = {

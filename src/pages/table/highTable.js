@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Table, Modal, message, Button, Badge } from 'antd'
 import axios from '../../axios'
-import Utils from './../../utils/util'
+import Utils from '../../utils/util'
 
 export default class BasicTable extends React.Component {
 
