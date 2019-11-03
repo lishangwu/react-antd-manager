@@ -12,7 +12,7 @@ class FormRegister extends React.Component{
     handleSubmit = ()=>{
         let userInfo = this.props.form.getFieldsValue();
         console.log(JSON.stringify(userInfo))
-        message.success(`${userInfo.userName} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
+        message.success(`${userInfo.userName} ，当前密码为：${userInfo.userPwd}`)
     }
 
     getBase64 = (img, callback)=>{
@@ -66,7 +66,7 @@ class FormRegister extends React.Component{
                         <FormItem label="用户名" {...formItemLayout}>
                             {
                                 getFieldDecorator('userName', {
-                                    initialValue: '',
+                                    initialValue: '张三',
                                     rules: [
                                         {
                                             required: true,
@@ -81,7 +81,7 @@ class FormRegister extends React.Component{
                         <FormItem label="密码" {...formItemLayout}>
                             {
                                 getFieldDecorator('userPwd', {
-                                    initialValue: ''
+                                    initialValue: '123'
                                 })(
                                     <Input type="password" placeholder="请输入密码" />
                                 )
@@ -187,7 +187,8 @@ class FormRegister extends React.Component{
                                     <Upload
                                         listType="picture-card"
                                         showUploadList={false}
-                                        action="//jsonplaceholder.typicode.com/posts/"
+                                        // action="//jsonplaceholder.typicode.com/posts/"
+                                        action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
                                         onChange={this.handleChange}
                                     >
                                     {this.state.userImg?<img src={this.state.userImg}/>:<Icon type="plus"/>}
@@ -198,7 +199,7 @@ class FormRegister extends React.Component{
                         <FormItem {...offsetLayout}>
                             {
                                 getFieldDecorator('userImg')(
-                                   <Checkbox>我已阅读过<a href="#">慕课协议</a></Checkbox>
+                                   <Checkbox checked='true'>我已阅读过<a href="javascript:void(0);">慕课协议</a></Checkbox>
                                 )
                             }
                         </FormItem>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Form, Input, Button, message, Icon, Checkbox } from "antd";
+import { Card, Form, Input, Button, message, Icon, Checkbox, Modal } from "antd";
 const FormItem = Form.Item;
 class FormLogin extends React.Component{
 
@@ -9,6 +9,15 @@ class FormLogin extends React.Component{
             if(!err){
                 message.success(`${userInfo.userName} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
             }
+        })
+    }
+
+    state = {
+        showModal2: false,
+    }
+    handleResetPwd = ()=>{
+        this.setState({
+            showModal2:true
         })
     }
 
@@ -46,7 +55,7 @@ class FormLogin extends React.Component{
                                         },
                                         {
                                             pattern:new RegExp('^\\w+$','g'),
-                                            message:'用户名必须为字母或者数字'
+                                            message:'用户名必须为字母、数字、下划线'
                                         }
                                     ]
                                 })(
@@ -73,13 +82,26 @@ class FormLogin extends React.Component{
                                     <Checkbox>记住密码</Checkbox>
                                 )
                             }
-                            <a href="#" style={{float:'right'}}>忘记密码</a>
+                            <a href="javascript:void(0);" onClick={this.handleResetPwd} style={{float:'right'}}>忘记密码</a>
                         </FormItem>
                         <FormItem>
                             <Button type="primary" onClick={this.handleSubmit}>登录</Button>
                         </FormItem>
                     </Form>
                 </Card>
+                <Modal
+                    title="忘记密码"
+                    visible={this.state.showModal2}
+                    okText="好的"
+                    cancelText="算了"
+                    onCancel={() => {
+                        this.setState({
+                            showModal2: false
+                        })
+                    }}
+                >
+                    <p>忘记密码忘记密码忘记密码忘记密码忘记密码</p>
+                </Modal>
             </div>
         );
     }
