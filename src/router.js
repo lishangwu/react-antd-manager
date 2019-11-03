@@ -55,12 +55,10 @@ export default class IRouter extends React.Component {
                                 {/* form */}
                                 <Route path="/form/login" component={FormLogin} />
                                 <Route path="/form/reg" component={FormRegister} />
+                                {/* table */}
+                                <Route path="/table/basic" component={BasicTable} />
+                                <Route path="/table/high" component={HighTable} />
 {/*
-    
-
-    <Route path="/table/basic" component={BasicTable} />
-    <Route path="/table/high" component={HighTable} />
-
     <Route path="/city" component={City} />
 
     <Route path="/rich" component={RichText} />

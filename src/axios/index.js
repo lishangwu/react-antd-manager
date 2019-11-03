@@ -23,11 +23,11 @@ export default class Axios {
             loading.style.display = 'block';
         }
         let baseApi = 'https://www.easy-mock.com/mock/5d6c185d3efa773f8b0bf8e0/mockapi'
-        let baseApi_imooc = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
-        if(options.cu){
-            baseApi = baseApi_imooc
-            message.warning('改变url :' + options.cu)
-        }
+        // let baseApi_imooc = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        // if(options.cu){
+        //     baseApi = baseApi_imooc
+        //     message.warning('改变url :' + options.cu)
+        // }
         return new Promise((resolve,reject)=>{
             axios({
                 url:options.url,

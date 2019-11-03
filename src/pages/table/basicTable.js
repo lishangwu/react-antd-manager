@@ -14,10 +14,10 @@ export default class BasicTable extends React.Component {
 
     componentDidMount() {
         const data = []
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
             data.push({
                 id: i,
-                username: '胡彦祖' + i,
+                userName: '胡彦祖' + i,
                 sex: 42,
                 state: '1',
                 interest: '1',
@@ -30,9 +30,9 @@ export default class BasicTable extends React.Component {
             item.key = index
         })
         this.setState({
-            dataSource: data,
+            dataSource2: data,
         })
-        this.request()
+        // this.request()
     }
 
     onRowClick = (record, index) => {
