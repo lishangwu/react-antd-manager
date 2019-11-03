@@ -10,7 +10,7 @@ export default class Header extends React.Component {
     state = {}
     componentWillMount() {
         this.setState({
-            userName: 'sb'
+            username: 'sb'
         })
         setInterval(() => {
             let sysTime = Util.formateDate(new Date().getTime())
@@ -47,7 +47,7 @@ export default class Header extends React.Component {
                             </Col> : ''
                     }
                     <Col span={menuType ? 18 : 24}>
-                        <span>欢迎，{this.state.userName}</span>
+                        <span>欢迎，{this.state.username}</span>
                         <a href="#">退出</a>
                     </Col>
                 </Row>

@@ -29,7 +29,6 @@ export default class City extends React.Component {
                     page: this.params.page
                 }
             },
-            cu: true
         }).then((res) => {
             let list = res.result.item_list.map((item, index) => {
                 item.key = index

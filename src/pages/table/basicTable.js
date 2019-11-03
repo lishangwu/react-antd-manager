@@ -6,33 +6,14 @@ import Utils from '../../utils/util'
 export default class BasicTable extends React.Component {
 
     state = {
-        dataSource2: []
+        dataSource: []
     }
     params = {
         page: 1
     }
 
     componentDidMount() {
-        const data = []
-        for (let i = 0; i < 100; i++) {
-            data.push({
-                id: i,
-                userName: '胡彦祖' + i,
-                sex: 42,
-                state: '1',
-                interest: '1',
-                birthday: '0000-00-00',
-                address: '西湖区湖底公园1号',
-                time: '09:00',
-            })
-        }
-        data.map((item, index) => {
-            item.key = index
-        })
-        this.setState({
-            dataSource2: data,
-        })
-        // this.request()
+        this.request()
     }
 
     onRowClick = (record, index) => {
@@ -66,7 +47,7 @@ export default class BasicTable extends React.Component {
                 })
                 let data = res
                 this.setState({
-                    dataSource2: res.result.list,
+                    dataSource: res.result.list,
                     selectedRowKeys: [],
                     selectedRows: null,
                     pagination: {
@@ -120,8 +101,8 @@ export default class BasicTable extends React.Component {
                 dataIndex: 'id'
             },
             {
-                title: 'userName',
-                dataIndex: 'userName'
+                title: 'username',
+                dataIndex: 'username'
             },
             {
                 title: 'sex',
@@ -182,7 +163,7 @@ export default class BasicTable extends React.Component {
                 <Card title='基础表格'>
                     <Table
                         bordered
-                        dataSource={this.state.dataSource2}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         pagination={true}
                     />
@@ -190,7 +171,7 @@ export default class BasicTable extends React.Component {
                 <Card title='动态数据' style={{ margin: '10px' }}>
                     <Table
                         bordered
-                        dataSource={this.state.dataSource2}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         pagination={true}
                     />
@@ -206,7 +187,7 @@ export default class BasicTable extends React.Component {
                                 }
                             }
                         }}
-                        dataSource={this.state.dataSource2}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         pagination={true}
                     />
@@ -218,7 +199,7 @@ export default class BasicTable extends React.Component {
                     <Table
                         bordered
                         rowSelection={rowCheckSelection}
-                        dataSource={this.state.dataSource2}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         pagination={true}
                     />
@@ -227,7 +208,7 @@ export default class BasicTable extends React.Component {
                     <Table
                         bordered
                         rowSelection={rowCheckSelection}
-                        dataSource={this.state.dataSource2}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         pagination={this.state.pagination}
                     />

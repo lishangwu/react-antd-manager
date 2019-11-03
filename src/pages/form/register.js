@@ -12,7 +12,7 @@ class FormRegister extends React.Component{
     handleSubmit = ()=>{
         let userInfo = this.props.form.getFieldsValue();
         console.log(JSON.stringify(userInfo))
-        message.success(`${userInfo.userName} ，当前密码为：${userInfo.userPwd}`)
+        message.success(`${userInfo.username} ，当前密码为：${userInfo.userPwd}`)
     }
 
     getBase64 = (img, callback)=>{
@@ -65,7 +65,7 @@ class FormRegister extends React.Component{
                     <Form layout="horizontal">
                         <FormItem label="用户名" {...formItemLayout}>
                             {
-                                getFieldDecorator('userName', {
+                                getFieldDecorator('username', {
                                     initialValue: '张三',
                                     rules: [
                                         {

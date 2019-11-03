@@ -7,7 +7,7 @@ class FormLogin extends React.Component{
         let userInfo = this.props.form.getFieldsValue();
         this.props.form.validateFields((err,values)=>{
             if(!err){
-                message.success(`${userInfo.userName} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
+                message.success(`${userInfo.username} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
             }
         })
     }
@@ -42,7 +42,7 @@ class FormLogin extends React.Component{
                     <Form style={{width:300}}>
                         <FormItem>
                             {
-                                getFieldDecorator('userName',{
+                                getFieldDecorator('username',{
                                     initialValue:'',
                                     rules:[
                                         {
