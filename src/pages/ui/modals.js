@@ -52,7 +52,7 @@ export default class Buttons extends React.Component {
                         })
                     }}
                 >
-                    <p>欢迎学习慕课新推出的React高级课程</p>
+                    <p>Open</p>
                 </Modal>
                 <Modal
                     title="React"
@@ -65,7 +65,7 @@ export default class Buttons extends React.Component {
                         })
                     }}
                 >
-                    <p>欢迎学习慕课新推出的React高级课程</p>
+                    <p>自定义页脚</p>
                 </Modal>
                 <Modal
                     title="React"
@@ -77,7 +77,7 @@ export default class Buttons extends React.Component {
                         })
                     }}
                 >
-                    <p>欢迎学习慕课新推出的React高级课程</p>
+                    <p>顶部20px弹框</p>
                 </Modal>
                 <Modal
                     title="React"
@@ -89,7 +89,7 @@ export default class Buttons extends React.Component {
                         })
                     }}
                 >
-                    <p>欢迎学习慕课新推出的React高级课程</p>
+                    <p>水平垂直居中</p>
                 </Modal>
             </div>
         );

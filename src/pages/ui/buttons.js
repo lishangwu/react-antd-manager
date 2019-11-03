@@ -24,11 +24,11 @@ export default class Buttons extends React.Component {
         return (
             <div>
                 <Card title="基础按钮" className="card-wrap">
-                    <Button type="primary">Imooc</Button>
-                    <Button>Imooc</Button>
-                    <Button type="dashed">Imooc</Button>
-                    <Button type="danger">Imooc</Button>
-                    <Button disabled>Imooc</Button>
+                    <Button type="primary">Button</Button>
+                    <Button>Button</Button>
+                    <Button type="dashed">Button</Button>
+                    <Button type="danger">Button</Button>
+                    <Button disabled>Button</Button>
                 </Card>
                 <Card title="图形按钮" className="card-wrap">
                     <Button icon="plus">创建</Button>
@@ -57,10 +57,10 @@ export default class Buttons extends React.Component {
                         <Radio value="default">中</Radio>
                         <Radio value="large">大</Radio>
                     </Radio.Group> 
-                    <Button type="primary" size={this.state.size}>Imooc</Button>
-                    <Button size={this.state.size}>Imooc</Button>
-                    <Button type="dashed" size={this.state.size}>Imooc</Button>
-                    <Button type="danger" size={this.state.size}>Imooc</Button>
+                    <Button type="primary" size={this.state.size}>Button</Button>
+                    <Button size={this.state.size}>Button</Button>
+                    <Button type="dashed" size={this.state.size}>Button</Button>
+                    <Button type="danger" size={this.state.size}>Button</Button>
                 </Card>
             </div>
         );

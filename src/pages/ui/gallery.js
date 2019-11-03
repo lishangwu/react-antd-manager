@@ -10,7 +10,8 @@ export default class Gallery extends React.Component{
     openGallery = (imgSrc)=>{
         this.setState({
             visible:true,
-            currentImg: '/gallery/'+imgSrc
+            currentImg: '/gallery/'+imgSrc,
+            ModalTitle:imgSrc
         })
     }
     render(){
@@ -27,8 +28,8 @@ export default class Gallery extends React.Component{
                 cover={<img src={'/gallery/'+item} onClick={()=>this.openGallery(item)}/>}
             >
                 <Card.Meta
-                    title="React Admin"
-                    description="I Love Imooc"
+                    title={item}
+                    description="this is a picture"
                 />
             </Card>
         ))
@@ -55,7 +56,7 @@ export default class Gallery extends React.Component{
                     width={300}
                     height={500}
                     visible={this.state.visible}
-                    title="图片画廊"
+                    title={"图片画廊" + this.state.ModalTitle}
                     onCancel={()=>{
                         this.setState({
                             visible:false

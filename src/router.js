@@ -34,7 +34,6 @@ import Nomatch from './pages/nomatch'
 export default class IRouter extends React.Component {
 
     render() {
-        console.log('Login:',Login);
         return (
             <HashRouter>
                 <App>
@@ -44,6 +43,7 @@ export default class IRouter extends React.Component {
                         <Admin>
                             <Switch>
                                 <Route path='/home' component={Home} />
+                                {/* ui */}
                                 <Route path='/ui/buttons' component={Buttons} />
                                 <Route path='/ui/modals' component={Modals} />
                                 <Route path="/ui/loadings" component={Loadings} />
@@ -52,6 +52,7 @@ export default class IRouter extends React.Component {
                                 <Route path="/ui/tabs" component={Tabs} />
                                 <Route path="/ui/gallery" component={Gallery} />
                                 <Route path="/ui/carousel" component={Carousel} />
+                                {/* form */}
                                 <Route path="/form/login" component={FormLogin} />
                                 <Route path="/form/reg" component={FormRegister} />
 {/*

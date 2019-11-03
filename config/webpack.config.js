@@ -138,9 +138,10 @@ module.exports = function(webpackEnv) {
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },
       }
+      //antd定制主题
       if (preProcessor === "less-loader") {
         loader.options.modifyVars = {
-          'primary-color' : '#f9c700',
+          // 'primary-color' : '#f9c700',
           // 'btn-primary-bg': '#FF2A8E',
           // 'btn-default-bg': '#6236FF',
           // 'menu-dark-bg':'linear-gradient(#64687D,#3D415A)',
