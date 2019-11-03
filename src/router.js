@@ -58,10 +58,12 @@ export default class IRouter extends React.Component {
                                 {/* table */}
                                 <Route path="/table/basic" component={BasicTable} />
                                 <Route path="/table/high" component={HighTable} />
+                                {/* 富文本 */}
+                                <Route path="/rich" component={RichText} />
 {/*
     <Route path="/city" component={City} />
 
-    <Route path="/rich" component={RichText} />
+    
 
     <Route path="/order" component={Order} />
                                 
