@@ -29,6 +29,7 @@ import Order from './pages/order/index'
 import OrderDetail from './pages/order/detail'
 
 import User from './pages/user'
+import BikeMap from './pages/map/bikeMap'
 
 import Common from './common'
 
@@ -69,6 +70,8 @@ export default class IRouter extends React.Component {
                                 <Route path="/admin/order" component={Order} />
                                 {/* 员工管理 */}
                                 <Route path="/admin/user" component={User} />
+                                {/* 车辆地图 */}
+                                <Route path="/admin/bikeMap" component={BikeMap} />
 
                                 <Route component={Nomatch} />
 
