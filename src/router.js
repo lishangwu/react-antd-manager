@@ -26,7 +26,7 @@ import City from './pages/city/index'
 import RichText from './pages/rich/index'
 
 import Order from './pages/order/index'
-// import OrderDetail from './pages/order/detail'
+import OrderDetail from './pages/order/detail'
 import Common from './common'
 
 import Nomatch from './pages/nomatch'
@@ -39,39 +39,32 @@ export default class IRouter extends React.Component {
                 <App>
                     <Route path='/login' component={Login}></Route>
 
-                    <Route path='/' render={() =>
+                    <Route path='/admin' render={() =>
                         <Admin>
                             <Switch>
-                                <Route path='/home' component={Home} />
+                                <Route path='/admin/home' component={Home} />
                                 {/* ui */}
-                                <Route path='/ui/buttons' component={Buttons} />
-                                <Route path='/ui/modals' component={Modals} />
-                                <Route path="/ui/loadings" component={Loadings} />
-                                <Route path="/ui/notification" component={Notice} />
-                                <Route path="/ui/messages" component={Messages} />
-                                <Route path="/ui/tabs" component={Tabs} />
-                                <Route path="/ui/gallery" component={Gallery} />
-                                <Route path="/ui/carousel" component={Carousel} />
+                                <Route path='/admin/ui/buttons' component={Buttons} />
+                                <Route path='/admin/ui/modals' component={Modals} />
+                                <Route path="/admin/ui/loadings" component={Loadings} />
+                                <Route path="/admin/ui/notification" component={Notice} />
+                                <Route path="/admin/ui/messages" component={Messages} />
+                                <Route path="/admin/ui/tabs" component={Tabs} />
+                                <Route path="/admin/ui/gallery" component={Gallery} />
+                                <Route path="/admin/ui/carousel" component={Carousel} />
                                 {/* form */}
-                                <Route path="/form/login" component={FormLogin} />
-                                <Route path="/form/reg" component={FormRegister} />
+                                <Route path="/admin/form/login" component={FormLogin} />
+                                <Route path="/admin/form/reg" component={FormRegister} />
                                 {/* table */}
-                                <Route path="/table/basic" component={BasicTable} />
-                                <Route path="/table/high" component={HighTable} />
+                                <Route path="/admin/table/basic" component={BasicTable} />
+                                <Route path="/admin/table/high" component={HighTable} />
                                 {/* 富文本 */}
-                                <Route path="/rich" component={RichText} />
+                                <Route path="/admin/rich" component={RichText} />
                                 {/* 城市管理 */}
-                                <Route path="/city" component={City} />
-{/*
-    
+                                <Route path="/admin/city" component={City} />
+                                {/* 订单 */}
+                                <Route path="/admin/order" component={Order} />
 
-    
-
-    <Route path="/order" component={Order} />
-                                
-
-    */
-}
                                 <Route component={Nomatch} />
 
                             </Switch>
@@ -79,15 +72,13 @@ export default class IRouter extends React.Component {
                         </Admin>
                     }></Route>
 
-                    <Route path='/common' render={() => {
-                        return (
+                    <Route path='/common' render={() => 
                             <Common>
                             {
-                                // <Route path='/common/order/detail/:orderId' component={OrderDetail} />
+                                <Route path='/common/order/detail/:orderId' component={OrderDetail} />
                             }
                             </Common>
-                        )
-                    }}></Route>
+                    }></Route>
                 </App>
             </HashRouter>
         )

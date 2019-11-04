@@ -30,7 +30,7 @@ export default class Order extends React.Component {
             }
         })
     }
-
+//{enapleMapClick:false}
     renderMap = (result)=>{
         this.map = new window.BMap.Map('orderDetailMap');
         // this.map.centerAndZoom('北京',11);
