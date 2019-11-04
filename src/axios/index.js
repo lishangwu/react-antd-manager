@@ -28,7 +28,8 @@ export default class Axios {
         //     baseApi = baseApi_imooc
         //     message.warning('改变url :' + options.cu)
         // }
-        let baseApi = 'http://localhost:3001/reactmanager'
+        // let baseApi = 'http://localhost:3001/reactmanager'
+        let baseApi = 'http://47.93.97.5:3002/reactmanager'
         return new Promise((resolve,reject)=>{
             axios({
                 url:options.url,

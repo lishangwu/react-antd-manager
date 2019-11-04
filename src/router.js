@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Route, Link, Switch } from 'react-router-dom'
+import { HashRouter, Route, Link, Switch, Redirect } from 'react-router-dom'
 
 import App from './App'
 import Admin from './admin'
@@ -101,6 +101,8 @@ export default class IRouter extends React.Component {
                             }
                             </Common>
                     }></Route>
+
+                    <Redirect path='/' component={Home} />
                 </App>
             </HashRouter>
         )
