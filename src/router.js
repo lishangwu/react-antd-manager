@@ -27,6 +27,9 @@ import RichText from './pages/rich/index'
 
 import Order from './pages/order/index'
 import OrderDetail from './pages/order/detail'
+
+import User from './pages/user'
+
 import Common from './common'
 
 import Nomatch from './pages/nomatch'
@@ -62,8 +65,10 @@ export default class IRouter extends React.Component {
                                 <Route path="/admin/rich" component={RichText} />
                                 {/* 城市管理 */}
                                 <Route path="/admin/city" component={City} />
-                                {/* 订单 */}
+                                {/* 订单管理 */}
                                 <Route path="/admin/order" component={Order} />
+                                {/* 员工管理 */}
+                                <Route path="/admin/user" component={User} />
 
                                 <Route component={Nomatch} />
 
