@@ -35,6 +35,8 @@ import Bar from './pages/echarts/bar'
 import Line from './pages/echarts/line'
 import Pie from './pages/echarts/pie'
 
+import Permission from './pages/permission'
+
 import Common from './common'
 
 import Nomatch from './pages/nomatch'
@@ -82,6 +84,8 @@ export default class IRouter extends React.Component {
                                 <Route path="/admin/charts/line" component={Line} />
                                 {/* 柱形图 */}
                                 <Route path="/admin/charts/pie" component={Pie} />
+                                {/* 权限设置 */}
+                                <Route path="/admin/permission" component={Permission} />
 
                                 <Route component={Nomatch} />
 
