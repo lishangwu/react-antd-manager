@@ -48,7 +48,7 @@ export default class Header extends React.Component {
                     }
                     <Col span={menuType ? 18 : 24}>
                         <span>欢迎，{this.state.username}</span>
-                        <a href="#">退出</a>
+                        <a href="/#/login">退出</a>
                     </Col>
                 </Row>
                 {

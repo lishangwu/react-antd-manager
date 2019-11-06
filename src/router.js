@@ -101,8 +101,6 @@ export default class IRouter extends React.Component {
                             }
                             </Common>
                     }></Route>
-
-                    <Redirect path='/' component={Home} />
                 </App>
             </HashRouter>
         )

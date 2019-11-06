@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         }
         return (
             <div className="home-wrap">
-                Home : 欢迎学习IMooc后台管理系统课程
+                Home : <h1>this is home</h1> 
             </div>
         );
     }
